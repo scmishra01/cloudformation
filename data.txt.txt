@@ -1,0 +1,26 @@
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:956717798492:stack/subhas-stage
+/8a912650-0cd0-11e9-80d5-0a58bb354edc"
+}
+
+I have installed AWS cli using msi and I have installed at
+C:\Program Files\Amazon\AWSCLI\bin>aws cloudformation create-stack --stack-name
+subhas-stage4 --template-body file://C:/Users/subhas/PycharmProjects/aws/stack.y
+ml --region us-east-1 --profile demo
+{
+    "StackId": "arn:aws:cloudformation:us-east-1:956717798492:stack/subhas-stage
+4/7a1ad980-0cd8-11e9-854c-0eee31812ac2"
+}
+
+ Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: For node to allow ssh,http,docker
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
